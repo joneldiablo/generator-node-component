@@ -1,0 +1,22 @@
+{
+  "name": "<%=hyphenName%>",
+  "version": "1.0.0",
+  "description": "<%=description%>",
+  "main": "lib/<%=className%>.js",
+  "author": "<%=author%>",
+  "license": "<%=license%>",
+  "scripts": {
+    "start": "npm run build && nodemon --exec babel-node main.js",
+    "build": "babel -d lib src",
+    "test": "mocha"
+  },
+  "bin": {},
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-add-module-exports": "^1.0.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "nodemon": "^1.18.4"
+  }
+}
