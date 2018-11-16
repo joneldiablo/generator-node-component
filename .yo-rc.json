@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Jonathan Diego Rodríguez",
+      "authorEmail": "jon_eldiablo@hotmail.com",
+      "authorUrl": "https://github.com/joneldiablo"
+    }
+  }
+}
