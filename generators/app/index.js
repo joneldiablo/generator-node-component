@@ -72,7 +72,7 @@ module.exports = class extends Generator {
       dest: '{file}'
     };
     let dotFiles = {
-      f: ['babelrc'],
+      f: ['babelrc', 'gitignore'],
       origin: '{file}',
       dest: '.{file}'
     };

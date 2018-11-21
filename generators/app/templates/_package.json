@@ -6,9 +6,11 @@
   "author": "<%=author%>",
   "license": "<%=license%>",
   "scripts": {
-    "start": "npm run build && nodemon --exec babel-node main.js",
+    "init": "npm i && npm run build && npm run doc",
+    "start": "nodemon --exec babel-node main.js",
     "build": "babel -d lib src",
-    "test": "mocha"
+    "test": "mocha",
+    "doc": "jsdoc ./src -d documentation -c .jsdoc -r"
   },
   "bin": {},
   "dependencies": {},
@@ -17,6 +19,7 @@
     "babel-plugin-add-module-exports": "^1.0.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-2": "^6.24.1",
-    "nodemon": "^1.18.4"
+    "nodemon": "^1.18.4",
+    "jsdoc": "^3.5.5"
   }
 }
