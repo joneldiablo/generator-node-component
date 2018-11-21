@@ -20,12 +20,12 @@ Alternative, install yeoman globally, clone the generator project and link them:
 Create folder and use the generator:
 
 ```cli
-  mkdir <<new-component>>
-  cd <<new-component>>
+  mkdir {{new-component}}
+  cd {{new-component}}
   yo node-component
 ```
 
-Replace **<<new-component>>** with the name for your component hyphens format
+Replace **{{new-component}}** with the name for your component hyphens format
 
 ===
 
