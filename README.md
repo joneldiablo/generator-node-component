@@ -3,14 +3,14 @@
 Install yeoman and generator globally:
 
 ```cli
-  npm i -g yo https://github.com/joneldiablo/generator-node-component.git
+  npm i -g yo git@gitlab.com:Bquate3.0/components/generator-node-component.git
 ```
 
 Alternative, install yeoman globally, clone the generator project and link them:
 
 ```cli
   npm i -g yo
-  git clone https://github.com/joneldiablo/generator-node-component.git
+  git clone git@gitlab.com:Bquate3.0/components/generator-node-component.git
   cd ./generator-node-component
   npm link
 ```
