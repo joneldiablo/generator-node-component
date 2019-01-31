@@ -4,7 +4,6 @@
   "description": "<%=description%>",
   "main": "lib/<%=className%>.js",
   "author": "<%=author%>",
-  "license": "<%=license%>",
   "scripts": {
     "init": "npm i && npm run build && npm run doc",
     "start": "nodemon --exec babel-node main.js",

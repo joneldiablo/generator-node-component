@@ -1,7 +1,8 @@
 const <%=className%> = require('./src/<%=className%>.js');
 
 const main = () => {
-  <%=className%>();
+  let <%=objectName%> = new <%=className%>();
+  console.log(<%=objectName%>.sayHello());
 }
 
 main();

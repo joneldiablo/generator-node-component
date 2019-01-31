@@ -29,8 +29,10 @@ module.exports = class extends Generator {
         message: 'Author: '
       },
       {
-        name: 'license',
-        message: 'License: '
+        type: 'confirm',
+        name: 'asClass',
+        message: 'Create component as class?',
+        default: true
       }
     ];
 
@@ -47,22 +49,23 @@ module.exports = class extends Generator {
       .split(/[ -_]/g)
       .map(seg => capitalize(seg))
       .join('');
+    className = this.props.asClass ? className : firstLower(className);
+
     let vars = {
       hyphenName: this.props.hyphenName,
       className: className,
       objectName: firstLower(className),
       description: this.props.description,
-      author: this.props.author,
-      license: this.props.license
+      author: this.props.author
     };
 
     let classFile = {
-      f: ['index'],
+      f: [this.props.asClass ? 'indexClass' : 'index'],
       origin: 'src/{file}.ejs',
       dest: `src/${className}.js`
     };
     let scriptFiles = {
-      f: ['main', 'bin'],
+      f: [this.props.asClass ? 'mainClass' : 'main', 'bin'],
       origin: '{file}.ejs',
       dest: '{file}.js'
     };

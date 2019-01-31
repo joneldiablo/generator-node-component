@@ -1,18 +1,4 @@
-import fs from 'fs';
-
-export default class <%=className%> {
-
-  constructor() {
-    this.libraryName = 'fs';
-  }
-
-  sayHello() {
-    const sayHello = 'sayHello';
-    return sayHello;
-  }
-
-  get library() {
-    return fs;
-  }
-
-}
+const <%=className%> = () => {
+  console.log('say hello!');
+};
+export default <%=className%>;
