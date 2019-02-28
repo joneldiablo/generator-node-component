@@ -1,5 +1,7 @@
 # generator-node-component
 
+Create an opinionated class or function component to use as package to integrate in another project biggest. Thinking in modularize projects.
+
 Install yeoman and generator globally:
 
 ```cli
