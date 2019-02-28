@@ -64,8 +64,13 @@ module.exports = class extends Generator {
       origin: 'src/{file}.ejs',
       dest: `src/${className}.js`
     };
-    let scriptFiles = {
-      f: [this.props.asClass ? 'mainClass' : 'main', 'bin'],
+    let mainFiles = {
+      f: [this.props.asClass ? 'mainClass' : 'main'],
+      origin: '{file}.ejs',
+      dest: 'main.js'
+    };
+    let dontModifyFiles = {
+      f: ['bin'],
       origin: '{file}.ejs',
       dest: '{file}.js'
     };
@@ -75,12 +80,12 @@ module.exports = class extends Generator {
       dest: '{file}'
     };
     let dotFiles = {
-      f: ['babelrc', 'gitignore', 'jsdoc'],
+      f: ['babelrc', 'gitignore', 'jsdoc', 'npmignore'],
       origin: '{file}',
       dest: '.{file}'
     };
 
-    let files = [classFile, scriptFiles, slashFiles, dotFiles];
+    let files = [classFile, mainFiles, dontModifyFiles, slashFiles, dotFiles];
 
     files.forEach(element => {
       element.f.forEach(file => {
