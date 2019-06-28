@@ -6,9 +6,11 @@
   "author": "<%=author%>",
   "scripts": {
     "init": "npm i && npm run build && npm run doc",
-    "start": "nodemon --exec babel-node main.js",
-    "build": "babel -d lib src",
-    "test": "mocha",
+    "start": "node main.js",
+    "build": "babel -d lib src --source-maps",
+    "test": "nodemon --exec babel-node test",
+    "qa": "npm run build & node main.js",
+    "debug": "npm run build -- --watch & nodemon main.js",
     "doc": "jsdoc ./src -d documentation -c .jsdoc -r"
   },
   "bin": {},
