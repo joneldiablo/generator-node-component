@@ -1,6 +1,6 @@
 {
   "name": "generator-node-component",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "yeoman node component generator",
   "homepage": "https://github.com/joneldiablo/generator-node-component",
   "author": {
